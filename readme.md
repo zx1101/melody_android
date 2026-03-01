@@ -385,4 +385,30 @@ The list of commands for
 ># Wifi Tweaks
 >>```
 >>adb shell settings put global wifi_poor_connection_warning 0
->>adb shell 
+>>adb shell
+>>```
+># Experimental
+>>```
+>>settings put system touch_response_boost 1
+>>settings put system touch_latency 0
+>>settings put global cpu_boost 1
+>>settings put global gpu_boost 1
+>>settings put global thermal_limit 1
+>>settings put global scheduler_policy performance
+>>settings put global wifi_scan_optimization 1
+>>settings put global mobile_data_boost 1
+>>settings put global network_latency_opt 1
+>>settings put secure app_launch_boost 1
+>>settings put secure zygote_prefork 1
+>>settings put secure force_app_standby 0
+>>settings put secure background_app_limit 0
+>>settings put secure keep_launcher_in_memory 1
+>>settings put secure ram_boost 0
+>>settings put global surfaceflinger_max_frame_interval 1
+>>settings put system hwui_disable_vsync 0
+>>settings put global activity_manager_constants trim_memory_modulate false
+>>settings put global activity_manager_constants trim_memory_level 80
+>>settings put global activity_manager_constants max_cached_processes=128 (set this to 64 if you have 6gb ram only if you have 8 or 12/16gb ram set it to 128) 
+>>settings put global activity_manager_constants max_cached_processes=10
+>>device_config set_sync_disabled_for_tests persistent
+>>device_config put activity_manager max_cached_processes 10
